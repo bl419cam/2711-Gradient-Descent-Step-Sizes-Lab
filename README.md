@@ -9,12 +9,12 @@ In this lab, you'll practice applying gradient descent.  As you know, gradient d
 
 You will be able to:
 
-- Understand how to go from RSS to finding a "best fit" line
-- Understand how gradient descent can be used to find the best intercept for your linear regression model
+- Use gradient descent to find the optimal parameters for a linear regression model
+- Describe how to use an RSS curve to find the optimal parameters for a linear regression model
 
 ## Setting up our initial regression line
 
-Once again, we'll take take a look at revenues our data example, which looks like this:
+Once again, we'll take a look at revenues our data example, which looks like this:
 
 
 ```python
@@ -218,7 +218,7 @@ updated_b(6.631, .01, current_slope)
 
 Take a careful look at how we use the `updated_b` function.  By using our updated value of $b$ we are quickly converging towards an optimal value of $b$.   
 
-Now let's write another function called `gradient_descent`.  The inputs of the function are `x_values`, `y_values`, `steps`, the `m` we are holding constant, the `learning_rate`, and the `current_b` that we are looking at.  The `steps` arguments represents the number of steps the function will take before the function stops.  We can get a sense of the return value in the cell below.  It is a list of dictionaries, with each dictionary having a key of the current `b` value, the `slope` of the cost curve at that `b` value, and the `rss` at that `b` value.
+Now let's write another function called `gradient_descent`.  The inputs of the function are `x_values`, `y_values`, `steps`, the `m` we are holding constant, the `learning_rate`, and the `current_b` that we are looking at.  The `steps` arguments represent the number of steps the function will take before the function stops.  We can get a sense of the return value in the cell below.  It is a list of dictionaries, with each dictionary having a key of the current `b` value, the `slope` of the cost curve at that `b` value, and the `rss` at that `b` value.
 
 
 ```python
